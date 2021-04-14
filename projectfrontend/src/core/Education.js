@@ -6,6 +6,7 @@ export default function Education() {
             <h5>education className</h5>
             <h5>education className</h5>
             <h5>education className</h5>
+            <h5>education className</h5>
         </div>
     )
 }
