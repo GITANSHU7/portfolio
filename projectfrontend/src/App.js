@@ -17,6 +17,7 @@ import NavBars from "./core/NavBars";
 import Education from "./core/Education";
 import Contact from "./core/Contact";
 import About from "./core/About";
+import NavBar from "./components/Navbar";
 
 
 const Routes = () => {
@@ -24,7 +25,8 @@ const Routes = () => {
     
     
     <BrowserRouter>
-    <NavBars />
+
+    <NavBar />
 
       <Switch>
       
