@@ -50,6 +50,7 @@ const ManageSkill = () => {
                 <div className="col-4">
                   <h3 className="text-black text-left">{skill.name}</h3>
                   <h3 className="text-black text-left">{skill.stats}</h3>
+                  <h3 className="text-black text-left">{skill.pathColor}</h3>
                 </div>
                 <div className="col-4">
                   <Link
