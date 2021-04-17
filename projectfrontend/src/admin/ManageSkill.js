@@ -42,13 +42,14 @@ const ManageSkill = () => {
       </Link>
       <div className="row">
         <div className="col-12">
-          <h2 className="text-center text-white my-3">All Skills</h2>
+          <h2 className="text-center text-black my-3">All Skills</h2>
 
           {skills.map((skill, index) => {
             return (
               <div key={index} className="row text-center mb-2 ">
                 <div className="col-4">
-                  <h3 className="text-white text-left">{skill.name}</h3>
+                  <h3 className="text-black text-left">{skill.name}</h3>
+                  <h3 className="text-black text-left">{skill.stats}</h3>
                 </div>
                 <div className="col-4">
                   <Link

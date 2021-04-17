@@ -9,7 +9,23 @@ const skillSchema = new mongoose.Schema({
         maxlenth : 32,
         unique : true
 
-    }
+    },
+    stats : {
+        type : String,
+        require : true , 
+        trim : true,
+        maxlenth : 32,
+        unique : true
+
+    },
+    pathColor: {
+        type : String,
+        require : true , 
+        trim : true,
+        maxlenth : 32,
+        
+
+    },
 }, {timestamps : true}
 );
 
