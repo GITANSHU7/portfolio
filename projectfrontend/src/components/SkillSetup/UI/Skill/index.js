@@ -22,7 +22,7 @@ const Progress = ({done}) => {
 	)
 }
 
-const App = () => (
+const Test = () => (
 	<>
 	<div className = "conatiner" >
 		
@@ -35,4 +35,4 @@ const App = () => (
 	</>
 );
 	
-export default App;
+export default Test;

@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <>
     <HeroSection />
-    <div style = {{backgroundColor  : "white"}}>
+   {/* <div style = {{backgroundColor  : "white"}}>
     <Skill />
-    </div>
+  </div> */}
         </>
   );
 }
