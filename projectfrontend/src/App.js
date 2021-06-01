@@ -18,25 +18,30 @@ import Education from "./core/Education";
 import Contact from "./core/Contact";
 import About from "./core/About";
 import NavBar from "./components/Navbar";
-
+import Topbar from "./components/topbar/Topbar";
+import Menu from "./components/menu/Menu";
+import { useState } from "react";
 
 const Routes = () => {
+  const [menuOpen,setMenuOpen] = useState(false)
   return (
     
     
     <BrowserRouter>
-
-    <NavBar />
+  <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+     <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+  
 
       <Switch>
       
         <Route path="/" exact component={Home} />
-        <Route path="/cart" exact  component = {Cart} />
+        
         <Route path="/signup" exact component={Signup} />
         <Route path="/signin" exact component={Signin} />
         <Route path="/about" exact component={About} />
         <Route path="/education" exact component={Education} />
         <Route path="/contact" exact component={Contact} />
+        
         <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
         <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
         <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
