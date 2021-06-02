@@ -12,7 +12,8 @@ import Topbar from "../components/topbar/Topbar";
 import Menu from "../components/menu/Menu";
 import Area from "../components/area/Area";
 
-
+import './home.scss'
+import Intro from "../components/intro/Intro";
 
 export default function Home() {
   console.log("API IS", API);
@@ -24,9 +25,11 @@ export default function Home() {
      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
      <div className="sections">
     {/*<HeroSection />*/}
+    <Intro />
     <Cart />
     <Contact />
     <Area />
+    
     </div>
     </div>
    {/* <div style = {{backgroundColor  : "white"}}>
