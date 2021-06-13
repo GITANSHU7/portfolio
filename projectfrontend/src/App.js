@@ -16,22 +16,38 @@ import Cart from "./core/Cart";
 import NavBars from "./core/NavBars";
 import Education from "./core/Education";
 import Contact from "./core/Contact";
-import About from "./core/About";
 import NavBar from "./components/Navbar";
 import Topbar from "./components/topbar/Topbar";
 import Menu from "./components/menu/Menu";
 import { useState } from "react";
 import Intro from "./components/intro/Intro";
+import Navbar from "./components/Navbar";
+import './core/home.scss'
+import AboutPage from "./components/Pages/AboutPage";
+
 
 const Routes = () => {
-  const [menuOpen,setMenuOpen] = useState(false)
+  
+  const [navToggle, setNavToggle] = useState(false);
+
+  const navClick = () =>{
+    setNavToggle(!navToggle)
+  }
   return (
     
     
     <BrowserRouter>
-  <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-     <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-  
+  <div className="Home">
+      <div className={`sidebar ${navToggle ? 'nav-toggle': ''}`}>
+        <NavBar />
+        
+      </div>
+      <div className="nav-btn" onClick={navClick}>
+        <div className="lines-1"></div>
+        <div className="lines-2"></div>
+        <div className="lines-3"></div>
+      </div>
+      </div> 
 
       <Switch>
       
@@ -39,10 +55,13 @@ const Routes = () => {
         
         <Route path="/signup" exact component={Signup} />
         <Route path="/signin" exact component={Signin} />
-        <Route path="/about" exact component={About} />
+        
         <Route path="/education" exact component={Education} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/intro" exact component={Intro} />
+        <Route path="/cart" exact component={Cart} />
+        <Route path="/about" exact component={AboutPage} />
+       
         
         <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
         <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />

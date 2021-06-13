@@ -1,93 +1,57 @@
-import React, { useState } from "react";
-import {isAutheticated , signout} from "../auth/helper";
-import { NavLink } from "react-router-dom";
-import "./Navbar.css";
+import React from 'react'
+import avatar from '../img/avatar.png';
+import {NavLink} from 'react-router-dom';
 
+function Navbar() {
+    return (
+        <div className="NavBar">
+            <nav className="nav">
+                <div className="profile">
+                    <img src={avatar} alt=""/>
+                 </div>
 
+                <ul className="nav-items">
+                    <li className="nav-item">
+                        <NavLink to="/" exact activeClassName="active">
+                            Home
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/about" exact activeClassName="active">
+                            About
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/cart" exact activeClassName="active">
+                            Cart
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/portfolios" exact activeClassName="active">
+                            Portfolios
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/blogs" exact activeClassName="active">
+                            Blogs
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/contact" exact activeClassName="active">
+                            Contact
+                        </NavLink>
+                    </li>
+                </ul>
 
-function NavBar(history) {
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => setClick(!click);
-  return (
-    <>
-      <nav className="navbar">
-        <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
-            CodeBucks
-            <i className="fas fa-code"></i>
-          </NavLink>
-
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Home
-              </NavLink>
-            </li>
-           
-           
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/contact"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Contact
-              </NavLink>
-            </li> <li className="nav-item">
-              <NavLink
-                exact
-                to="/cart"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Cart
-              </NavLink>
-            </li>
-           
-            {!isAutheticated() && (
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/signin"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Sign In
-              </NavLink>
-            </li> )}
-            {isAutheticated() && isAutheticated().user.role === 1 && (
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/admin/dashboard"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Admin
-              </NavLink>
-            </li>
-            )}
-             
-          </ul>
-          <div className="nav-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-          </div>
+                <footer className="footer">
+                    <p>
+                        @2021 Lorem Ipsum
+                    </p>
+            </footer>
+            </nav>
+            
         </div>
-      </nav>
-    </>
-  );
+    )
 }
 
-export default NavBar;
+export default Navbar;
