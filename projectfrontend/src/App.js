@@ -12,55 +12,72 @@ import AddProject from "./admin/AddProject";
 import AddEducation from "./admin/AddEducation";
 import ManageProjects from "./admin/ManageProjects";
 import ManageSkill from "./admin/ManageSkill";
-import Cart from "./core/Cart";
 import NavBars from "./core/NavBars";
 import Education from "./core/Education";
 import Contact from "./core/Contact";
 import NavBar from "./components/Navbar";
-import Topbar from "./components/topbar/Topbar";
-import Menu from "./components/menu/Menu";
+
+
 import { useState } from "react";
-import Intro from "./components/intro/Intro";
+
 import Navbar from "./components/Navbar";
-import './core/home.scss'
 import AboutPage from "./components/Pages/AboutPage";
+import PortfoliosPage from "./components/Pages/PortfoliosPage";
+import BlogsPage from "./components/Pages/BlogsPage";
+import HomePage from "./components/Pages/HomePage";
+import './App.scss'
+import ContactPage from "./components/Pages/ContactPage";
+import ResumePage from "./components/Pages/RemusePage";
 
 
-const Routes = () => {
-  
+function App() {
   const [navToggle, setNavToggle] = useState(false);
 
   const navClick = () =>{
     setNavToggle(!navToggle)
   }
-  return (
-    
-    
-    <BrowserRouter>
-  <div className="Home">
+
+return (
+
+  <div className="App">
       <div className={`sidebar ${navToggle ? 'nav-toggle': ''}`}>
-        <NavBar />
-        
+        <Navbar />
       </div>
       <div className="nav-btn" onClick={navClick}>
         <div className="lines-1"></div>
         <div className="lines-2"></div>
         <div className="lines-3"></div>
       </div>
-      </div> 
-
-      <Switch>
-      
-        <Route path="/" exact component={Home} />
-        
-        <Route path="/signup" exact component={Signup} />
+      <div className="main-content">
+          <div className="content">
+          
+          <Switch>
+              <Route path="/" exact>
+              <HomePage />
+              </Route>
+              <Route path="/about" exact>
+              <AboutPage />
+              </Route>
+              <Route path="/resume" exact>
+              <ResumePage />
+              </Route>
+              
+              <Route path="/portfolios" exact>
+              <PortfoliosPage />
+              </Route>
+              <Route path="/signup" exact component={Signup} />
         <Route path="/signin" exact component={Signin} />
         
         <Route path="/education" exact component={Education} />
-        <Route path="/contact" exact component={Contact} />
-        <Route path="/intro" exact component={Intro} />
-        <Route path="/cart" exact component={Cart} />
+        <Route path="/contact" exact component={ContactPage} />
+        
+    
         <Route path="/about" exact component={AboutPage} />
+        <Route path="/portfolios" exact component={PortfoliosPage} />
+        <Route path="/blogs" exact component={BlogsPage} />
+        <Route path="/remume" exact component={ResumePage} />
+
+        
        
         
         <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
@@ -96,9 +113,17 @@ const Routes = () => {
         />
       </Switch>
       
-    </BrowserRouter>
+            
+      
     
-  );
-};
+        
+    </div>
+    </div>
+    </div>
 
-export default Routes;
+        
+  );
+}
+
+
+export default App;

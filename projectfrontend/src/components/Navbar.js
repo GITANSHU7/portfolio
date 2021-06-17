@@ -1,7 +1,9 @@
-import React from 'react'
-import avatar from '../img/avatar.png';
-import {NavLink} from 'react-router-dom';
 
+import avatar from '../img/about1.jpg';
+import {NavLink} from 'react-router-dom';
+import React , { Fragment } from 'react';
+import { Link  , withRouter} from 'react-router-dom';
+import { signout, isAutheticated } from '../auth/helper'
 function Navbar() {
     return (
         <div className="NavBar">
@@ -21,16 +23,13 @@ function Navbar() {
                             About
                         </NavLink>
                     </li>
-                    <li className="nav-item">
-                        <NavLink to="/cart" exact activeClassName="active">
-                            Cart
-                        </NavLink>
-                    </li>
+                   
                     <li className="nav-item">
                         <NavLink to="/portfolios" exact activeClassName="active">
                             Portfolios
                         </NavLink>
                     </li>
+                    
                     <li className="nav-item">
                         <NavLink to="/blogs" exact activeClassName="active">
                             Blogs
@@ -41,11 +40,34 @@ function Navbar() {
                             Contact
                         </NavLink>
                     </li>
+                    
+                  
+                   
+                    {!isAutheticated() && (
+        <Fragment>
+          <li className="nav-item">
+            <NavLink
+              exact activeClassName="active"
+              to="/signup"
+            >
+              Signup
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              exact activeClassName="active"
+              to="/signin"
+            >
+              Sign In
+            </NavLink>
+          </li>
+        </Fragment>
+                    )}
                 </ul>
 
                 <footer className="footer">
                     <p>
-                        @2021 Lorem Ipsum
+                        @2021 
                     </p>
             </footer>
             </nav>

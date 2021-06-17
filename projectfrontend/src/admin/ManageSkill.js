@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import { isAutheticated } from "../auth/helper";
+import SkillsSection from "../components/SkillsSection";
 import { getSkills, deleteSkill } from "./helper/adminapicall";
 
 const ManageSkill = () => {
@@ -47,11 +48,9 @@ const ManageSkill = () => {
           {skills.map((skill, index) => {
             return (
               <div key={index} className="row text-center mb-2 ">
-                <div className="col-4">
-                  <h3 className="text-black text-left">{skill.name}</h3>
-                  <h3 className="text-black text-left">{skill.stats}</h3>
-                  <h3 className="text-black text-left">{skill.pathColor}</h3>
-                </div>
+                <div className="col-4"><SkillsSection key={index}  skill={skill.name}  progress={skill.stats} width={skill.stats} />
+                
+                  </div>
                 <div className="col-4">
                   <Link
                     className="btn btn-success"

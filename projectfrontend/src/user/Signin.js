@@ -20,6 +20,10 @@ const Signin = () => {
     setValues({ ...values, error: false, [name]: event.target.value });
   };
 
+  
+const refreshPage = () => (
+  window.location.reload(false)
+)
   const onSubmit = event => {
     event.preventDefault();
     setValues({ ...values, error: false, loading: true });
@@ -83,7 +87,7 @@ const Signin = () => {
         <div className="col-md-6 offset-sm-3 text-left">
           <form>
             <div className="form-group">
-              <label className="text-light">Email</label>
+              <label className="text-Danger">Email</label>
               <input
                 onChange={handleChange("email")}
                 value={email}
@@ -93,7 +97,7 @@ const Signin = () => {
             </div>
 
             <div className="form-group">
-              <label className="text-light">Password</label>
+              <label className="text-Danger">Password</label>
               <input
                 onChange={handleChange("password")}
                 value={password}
@@ -112,12 +116,21 @@ const Signin = () => {
 
   return (
   <>
+  <br />
+  <br />
+  <br />
+  <br />
+
+  
+  <br />
+  <br />
+
       {loadingMessage()}
       {errorMessage()}
       {signInForm()}
       {performRedirect()}
 
-      <p className="text-white text-center">{JSON.stringify(values)}</p>
+      {/*<p className="text-black text-center">{JSON.stringify(values)}</p>*/}
 </>
   );
 };
