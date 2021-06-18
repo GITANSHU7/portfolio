@@ -22,7 +22,6 @@ export const MainLayout = styled.div`
 function ResumePage() {
     return (
         <MainLayout>
-            
             <Resume />
         </MainLayout>
     )

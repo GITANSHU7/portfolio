@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from '../components/Title';
+import Title from './MyTitle';
 import SmallTitle from '../components/SmallTitle';
 
 import ResumeItem from '../components/ResumeItem';
@@ -67,7 +67,7 @@ function Resume() {
     )
 }
 
-const ResumeStyled = styled.div`
+const ResumeStyled = styled.section`
     .small-title{
         padding-bottom: 3rem;
     }
@@ -78,7 +78,7 @@ const ResumeStyled = styled.div`
         border-left: 2px solid var(--border-color);
     }
 `;
-export const InnerLayout = styled.div`
+ const InnerLayout = styled.div`
     padding: 5rem 0;
 `;
 export default Resume;
