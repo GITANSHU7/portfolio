@@ -56,10 +56,10 @@ function ContactPage() {
 </div>
 
 
-                <div className="contact-sect">
+               {/* <div className="contact-sect">
                     <ContactItem icon={phone} text1={'+257 7756110718'} text2={'+0333 6782 8792'} title={'Phone'}/>
                     <ContactItem icon={email} text1={'loremipusum@hmail.com'} text2={'abcloremipsum@gmail.com'} title={'Email'}/>
-                    </div>
+    </div>*/}
             </div>
         </div>
     )
