@@ -8,6 +8,7 @@ function App() {
   return (
     <div >
     <Tittle title={'Recent Blogs'} span={'Recent Blogs'} />
+    <br />
 <VerticalTimeline>
 <VerticalTimelineElement
     className="vertical-timeline-element--work"
@@ -17,41 +18,52 @@ function App() {
     dateStyle={{backgroundColor : "red"}}
   
     iconStyle={{ background: 'rgb(33, 100, 243)', color: '#fff'  }}
-    icon = {<MdWork />}
+    icon ={<MdSchool />}
   >
-      <span class="w3-tag w3-green">2014-2016</span>
-    <h3 className="vertical-timeline-element-title">Art Director</h3>
-    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+      <span class="w3-tag w3-green">2014</span>
+      <span class="w3-tag w3-green" style={{float:"right"}}>10th</span>
+      <br />
+    {/*<h3 className="vertical-timeline-element-title"></h3>*/}
+    <h4 className="vertical-timeline-element-subtitle">D.A.V PUBLIC SCHOOL , SAMASTIPUR</h4>
     <p>
-      Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+      CBSE BOARD
     </p>
     
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
-    date="2010 - 2011"
+    
+    contentStyle={{ background: 'rgb(235, 237, 83)', color: 'black' }}
+    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+   
+    
     iconStyle={{ background: 'rgb(33, 100, 243)', color: '#fff' }}
 icon ={<MdSchool />}
   >
-    <h3 className="vertical-timeline-element-title">Art Director</h3>
-    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+       <span class="w3-tag w3-#F9B208">2014 - 2016</span>
+      <span class="w3-tag w3-black" style={{float:"right"}}>12th</span>
+      <br />
+      <h4 className="vertical-timeline-element-subtitle">St.Paul SENIOR SEC , SAMASTIPUR</h4>
     <p>
-      Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+      CBSE BOARD
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
-    date="2008 - 2010"
-    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    
+    contentStyle={{ background: 'rgb(219, 35, 60)', color: '#fff' }}
+    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+    iconStyle={{ background: 'rgb(33, 100, 243)', color: '#fff' }}
+    icon ={<MdSchool />}
   >
-    <h3 className="vertical-timeline-element-title">Web Designer</h3>
-    <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+        <span class="w3-tag w3-orange">2016 - 2020</span>
+      <span class="w3-tag w3-orange" style={{float:"right"}}>bTech</span>
+      <br />
+      <h4 className="vertical-timeline-element-subtitle">DEHRADUN INSTITUTE of TECHNOLOGY</h4>
     <p>
-      User Experience, Visual Design
+      UGC BOARD
     </p>
   </VerticalTimelineElement>
-  <VerticalTimelineElement
+  {/*<VerticalTimelineElement
     className="vertical-timeline-element--work"
     date="2006 - 2008"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -67,7 +79,7 @@ icon ={<MdSchool />}
     className="vertical-timeline-element--education"
     date="April 2013"
     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}>
-
+ icon = {<MdWork />}
   
     <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
     <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
@@ -98,7 +110,7 @@ icon ={<MdSchool />}
     <p>
       Creative Direction, Visual Design
     </p>
-  </VerticalTimelineElement>
+  </VerticalTimelineElement> */}
   <VerticalTimelineElement
     iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
   
