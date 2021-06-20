@@ -26,21 +26,27 @@ function ContactPage() {
     <div className="fcf-form-group">
         <label type="Name" className="fcf-label">Your name</label>
         <div className="fcf-input-group">
-            <input type="text" id="Name" name="Name" className="fcf-form-control" required />
+            <input type="text" id="Name" name="Name" className="fcf-form-control" required placeholder="Enter Your Name" />
         </div>
     </div>
 
     <div className="fcf-form-group">
         <label type="Email" className="fcf-label">Your email address</label>
         <div className="fcf-input-group">
-            <input type="email" id="Email" name="Email" className="fcf-form-control" required />
+            <input type="email" id="Email" name="Email" className="fcf-form-control" required  placeholder="Enter Your Email Id"/>
         </div>
     </div>
 
     <div className="fcf-form-group">
+        <label type="Name" className="fcf-label">Subject</label>
+        <div className="fcf-input-group">
+            <input type="text" id="Subject" name="Subject" className="fcf-form-control" required placeholder="Enter Subject" />
+        </div>
+    </div>
+    <div className="fcf-form-group">
         <label type="Message" className="fcf-label">Your message</label>
         <div className="fcf-input-group">
-            <textarea id="Message" name="Message" className="fcf-form-control" rows="6" maxLength="3000" required></textarea>
+            <textarea id="Message" name="Message" className="fcf-form-control" rows="6" maxLength="3000" required placeholder="Enter Message" ></textarea>
         </div>
     </div>
 
