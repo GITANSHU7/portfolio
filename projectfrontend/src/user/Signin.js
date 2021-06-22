@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 
 import { signin, authenticate, isAutheticated } from "../auth/helper";
+import "./Signin.css";
 
 const Signin = () => {
   const [values, setValues] = useState({
@@ -83,31 +84,37 @@ const refreshPage = () => (
 
   const signInForm = () => {
     return (
-      <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+      <div className="wrapper">
+        <div className="form-wrapper">
+          <h1>Login</h1>
           <form>
-            <div className="form-group">
-              <label className="text-Danger">Email</label>
+            <div className="email">
+              <label htmlFor="email">Email</label>
               <input
+                placeholder="Email"
+                type="email"
+                name="email"
                 onChange={handleChange("email")}
                 value={email}
-                className="form-control"
-                type="email"
               />
+              
             </div>
-
-            <div className="form-group">
-              <label className="text-Danger">Password</label>
+            <div className="password">
+              <label htmlFor="password">Password</label>
               <input
-                onChange={handleChange("password")}
+                 onChange={handleChange("password")}
                 value={password}
-                className="form-control"
+                placeholder="Password"
                 type="password"
+                name="password"
+               
               />
+             
             </div>
-            <button onClick={onSubmit} className="btn btn-success btn-block">
-              Submit
-            </button>
+            <div className="createAccount">
+              <button type="submit" onClick={onSubmit} >Login</button>
+             
+            </div>
           </form>
         </div>
       </div>
