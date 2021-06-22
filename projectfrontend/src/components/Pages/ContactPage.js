@@ -1,4 +1,4 @@
-import React from 'react'
+import React , { useState } from 'react'
 import ContactItem from '../../components/ContactItem';
 import phone from '../../img/phone.svg';
 import email from '../../img/emailme.svg';
@@ -6,12 +6,20 @@ import location from '../../img/location.svg';
 import Tittle from '../../components/Titlte';
 import emailjs from "emailjs-com";
 
+const Result = () => {
+    return(
+        <p>Your message has been sent! . I Will contact you soon</p>
+    )
+}
+
 const refreshPage = () => (
     window.location.reload(false)
 )
 
+
 function ContactPage() {
-    
+    const[result, showResult] = useState(false);
+
   function sendEmail(e) {
     e.preventDefault();
 
@@ -22,6 +30,7 @@ function ContactPage() {
           console.log(error.text);
       });
       e.target.reset()
+      showResult(true)
   }
 
     return (
@@ -68,7 +77,7 @@ function ContactPage() {
     <div className="fcf-form-group">
         <button type="submit" id="fcf-button" className="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"  value="Send Message">Send Message</button>
     </div>
-
+            <div className="row">{result ? <Result /> : ""}</div>
     
 
     

@@ -4,6 +4,8 @@ import {NavLink} from 'react-router-dom';
 import React , { Fragment } from 'react';
 import { Link  , withRouter} from 'react-router-dom';
 import { signout, isAutheticated } from '../auth/helper'
+import { FaUserCircle } from 'react-icons/fa';
+
 function Navbar() {
     return (
         <div className="NavBar">
@@ -71,8 +73,8 @@ function Navbar() {
                 </ul>
 
                 <footer className="footer">
-                    <p>
-                        2021
+                    <p className="loginstyle">
+                        <Link to ="/signin"><FaUserCircle style={{marginRight : "5px"}} className="icon log" /></Link> Login
                     </p>
             </footer>
             </nav>

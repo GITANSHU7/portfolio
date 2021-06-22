@@ -57,10 +57,23 @@
         .footer{
             width: 100%;
             border-top: 1px solid #2e344e;
+            .icon{
+                font-size: 1.5rem;
+            color: #a4acc4;
+            transition: all .4s ease-in-out;
+            }
+            .log:hover{
+                color:crimson;
+            }
             p{
                 text-align: center;
                 padding: 1rem 0;
             }
+            p:hover{
+                color:crimson;
+            }
+           
+
         }
     }
 }
