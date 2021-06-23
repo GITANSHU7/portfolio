@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Tittle from "../components/Titlte";
 import { Redirect } from "react-router-dom";
 
 import { signin, authenticate, isAutheticated } from "../auth/helper";
@@ -84,6 +84,10 @@ const refreshPage = () => (
 
   const signInForm = () => {
     return (
+      <div>
+      <Tittle title={'Login'} span={'Login'} />
+      <br />
+      <br />
       <div className="wrapper">
         <div className="form-wrapper">
           <h1>Login</h1>
@@ -118,19 +122,13 @@ const refreshPage = () => (
           </form>
         </div>
       </div>
+      </div>
     );
   };
 
   return (
   <>
-  <br />
-  <br />
-  <br />
-  <br />
-
-  
-  <br />
-  <br />
+ 
 
       {loadingMessage()}
       {errorMessage()}

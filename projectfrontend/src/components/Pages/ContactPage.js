@@ -35,6 +35,7 @@ function ContactPage() {
 
     return (
         <div>
+            
             <div className="title">
                 <Tittle title={'Contact'} span={'Contact Me'} />
             </div>

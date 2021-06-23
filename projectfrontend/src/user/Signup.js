@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Tittle from "../components/Titlte";
 import { Link } from "react-router-dom";
 import { signup } from "../auth/helper";
 
@@ -41,43 +41,56 @@ const Signup = () => {
 
   const signUpForm = () => {
     return (
-      <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
-          <form>
-            <div className="form-group">
-              <label className="text-Danger">Name</label>
-              <input
-                className="form-control"
-                onChange={handleChange("name")}
-                type="text"
-                value={name}
-              />
-            </div>
-            <div className="form-group">
-              <label className="text-Danger">Email</label>
-              <input
-                className="form-control"
-                onChange={handleChange("email")}
-                type="email"
-                value={email}
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="text-Danger">Password</label>
-              <input
-                onChange={handleChange("password")}
-                className="form-control"
-                type="password"
-                value={password}
-              />
-            </div>
-            <button onClick={onSubmit} className="btn btn-success btn-block">
-              Submit
-            </button>
-          </form>
-        </div>
+      <div>
+      <Tittle title={'Sign in'} span={'Sign in'} />
+      <br />
+      <br />
+      <div className="wrapper">
+      <div className="form-wrapper">
+        <h1>Create Account</h1>
+        <form>
+    <div className="name">
+            <label htmlFor="name">Name</label>
+            <input
+              placeholder="Enter Your Name"
+              type="name"
+              name="name"
+              onChange={handleChange("name")}
+              value={name}
+            />
+            
+          </div>
+          <div className="email">
+            <label htmlFor="email">Email</label>
+            <input
+              placeholder="Enter Your Email Id"
+              type="email"
+              name="email"
+              onChange={handleChange("email")}
+              value={email}
+            />
+            
+          </div>
+          <div className="password">
+            <label htmlFor="password">Password</label>
+            <input
+               onChange={handleChange("password")}
+              value={password}
+              placeholder="Enter Your Password"
+              type="password"
+              name="password"
+             
+            />
+           
+          </div>
+          <div className="createAccount">
+            <button type="submit" onClick={onSubmit} >Login</button>
+           
+          </div>
+        </form>
       </div>
+    </div>
+    </div>
     );
   };
 
@@ -90,7 +103,7 @@ const Signup = () => {
             style={{ display: success ? "" : "none" }}
           >
             New account was created successfully. Please
-            <Link to="/signin">Login Here</Link>
+            <Link to="/signin"> Login Here</Link>
           </div>
         </div>
       </div>
@@ -114,10 +127,8 @@ const Signup = () => {
 
   return (
     <>
-    <br />
-    <br />
-    <br />
-    <br />
+    
+    
       {successMessage()}
       {errorMessage()}
       {signUpForm()}
