@@ -62,36 +62,48 @@ const AddSkill = () => {
   };
 */}
   const myCategoryForm = () => (
-    <form>
-      <div className="form-group">
-        <p className="lead">Enter the Skill Details</p>
-        <input
-          type="text"
-          className="form-control my-3"
-          onChange={handleChange("name")}
-          value={name}
-          autoFocus
-          required
-          placeholder="Skill Type"
-        />
-        <input
-          type="text"
-          className="form-control my-3"
-          onChange={handleChange("stats")}
-          value={stats}
-          autoFocus
-          required
-          placeholder="Percentage"
-        />
-        
+    <div className="wrapper">
+
+    <div className="form-wrapper">
+     
+      <h1>ADD SKILL</h1>
+      <form>
+        <div className="name">
+          <label htmlFor="name">Skill's Name</label>
+          <input
+            placeholder="name"
+            type="name"
+            name="name"
+            onChange={handleChange("name")}
+            value={name}
+          />
+          
+        </div>
+        <div className="stats">
+          <label htmlFor="stats">Add Stats</label>
+          <input
+             onChange={handleChange("stats")}
+            value={stats}
+            placeholder="stats"
+            type="stats"
+            name="stats"
+           
+          />
+         
+        </div>
+        <div className="createAccount">
+          <button type="submit" onClick={onSubmit} >Login</button>
+          <span class="w3-tag w3-#F9B208"  ><Link to = "/admin/dashboard">Admin Home</Link></span>
       
         
-        <button onClick={onSubmit} className="btn btn-outline-info">
-          Create Skill Details
-        </button>
-      </div>
-    </form>
-  );
+       
+        </div>
+      </form>
+    </div>
+  </div>
+   
+   
+    );
 
   
   const successMessage = () => {
@@ -127,14 +139,12 @@ const AddSkill = () => {
   return (
     <
     >
-      <div className="row bg-white rounded">
-        <div className="col-md-8 offset-md-2">
+      
         {successMessage()}
       {errorMessage()}
           {myCategoryForm()}
-          {goBack()}
-        </div>
-      </div>
+          {/*{goBack()}*/}
+     
     </>
   );
 };

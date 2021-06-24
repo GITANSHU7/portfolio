@@ -63,7 +63,7 @@
   }
   
   
-  
+  .stats,
   .name,
   .email,
   .password {
@@ -72,10 +72,12 @@
     margin-bottom: 15px;
   }
   
+  .stats,
   .firstName,
   .lastName {
     width: 49%;
   }
+  .stats,
   .name,
   .email,
   .password {
