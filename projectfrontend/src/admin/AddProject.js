@@ -89,102 +89,98 @@ const AddProject = () => {
   );
 
   const createProjectForm = () => (
-    <form>
-      <span>Post photo</span>
-      <div className="form-group">
-        <label className="btn btn-block btn-success">
-          <input
-            onChange={handleChange("photo")}
-            type="file"
-            name="photo"
-            accept="image"
-            placeholder="choose a file"
-          />
-        </label>
-      </div>
-      <div className="form-group">
-        <input
-          onChange={handleChange("name")}
-          name="photo"
-          className="form-control"
-          placeholder="Name"
-          value={name}
-        />
-      </div>
-      <div className="form-group">
-        <textarea
-          onChange={handleChange("description")}
-          name="photo"
-          className="form-control"
-          placeholder="Description"
-          value={description}
-        />
-      </div>
-      <div className="form-group">
-        <input
-          onChange={handleChange("tech_stack")}
-          type="text"
-          className="form-control"
-          placeholder="tech_stack"
-          value={tech_stack}
-        />
-      </div>
-     {/* <div className="form-group">
-        <select
-          onChange={handleChange("skill")}
-          className="form-control"
-          placeholder="skill"
-        >
-          <option>Select</option>
-          {skills &&
-            skills.map((cate, index) => (
-              <option key={index} value={cate._id}>
-                {cate.name}
-              </option>
-            ))}
-        </select>
-            </div> */}
-      <div className="form-group">
-        <input
-          onChange={handleChange("github_link")}
-          type="text"
-          className="form-control"
-          placeholder="github_link"
-          value={github_link}
-        />
-      </div>
-      <div className="form-group">
-        <input
-          onChange={handleChange("project_link")}
-          type="text"
-          className="form-control"
-          placeholder="project_link"
-          value={project_link}
-        />
-      </div>
+    <div className="wrapper">
+        <div className="form-wrapper">
+          <h1>Add Project</h1>
+          <form>
+		  <div className="Post">
+              <label htmlFor="name">Add Photo</label>
+              <input
+                placeholder="Enter Your School/College Name"
+                type="file"
+                name="photo"
+                onChange={handleChange("photo")}
+              />
+              
+            </div>
 
-      <button
-        type="submit"
-        onClick={onSubmit}
-        className="btn btn-outline-success mb-3"
-      >
-        Create Project
-      </button>
-      
-    </form>
+		 <div className="name">
+          <label htmlFor="name">Name</label>
+          <input
+            placeholder="Enter Your School/College Name"
+            type="name"
+            name="name"
+            onChange={handleChange("name")}
+            value={name}
+          />
+          
+        </div>
+            <div className="description">
+              <label htmlFor="description">Description</label>
+              <input
+                placeholder="Enter Your Description"
+                type="description"
+                name="description"
+                onChange={handleChange("description")}
+                value={description}
+              />
+              
+            </div>
+
+		<div className="tech">
+              <label htmlFor="tech">Tech Stack</label>
+              <input
+                placeholder="Tech Stack"
+                type="tech_stack"
+                name="tech_stack"
+                onChange={handleChange("tech_stack")}
+                value={tech_stack}
+              />
+              
+            </div>
+            
+             <div className="github">
+              <label htmlFor="github">Github</label>
+              <input
+                placeholder="Enter Your Github Link"
+                type="github_link"
+                name="github_link"
+                onChange={handleChange("github_link")}
+                value={github_link}
+              />
+              
+           
+            
+            </div>
+		<div className="project">
+              <label htmlFor="project">Project Link</label>
+              <input
+                placeholder="Enter Your Project Link"
+                type="project_link"
+                name="project_link"
+                onChange={handleChange("project_link")}
+                value={project_link}
+              />
+              
+           
+            
+            </div>
+            <div className="createAccount">
+              <button type="submit" onClick={onSubmit} >Create</button>
+              <span class="w3-tag w3-#F9B208"  ><Link to = "/admin/dashboard">Admin Home</Link></span>
+            </div>
+          </form>
+        </div>
+      </div>
   );
 
   return (
     <>
-      <Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">
-        Admin Home
-      </Link>
-      <div className="row bg-dark text-white rounded">
-        <div className="col-md-8 offset-md-2">
+     
+      
           {successMessage()}
           {createProjectForm()}
-        </div>
-      </div>
+      
     </>
   );
 };
