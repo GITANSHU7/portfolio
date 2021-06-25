@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Tittle from "../components/Titlte";
 import { isAutheticated } from "../auth/helper";
 import { Link } from "react-router-dom";
 import { createSkill } from "./helper/adminapicall";
@@ -62,6 +62,10 @@ const AddSkill = () => {
   };
 */}
   const myCategoryForm = () => (
+    <div>
+      <Tittle title={'Add Skill'} span={'Skill'} />
+      <br />
+      <br />
     <div className="wrapper">
 
     <div className="form-wrapper">
@@ -100,6 +104,7 @@ const AddSkill = () => {
         </div>
       </form>
     </div>
+  </div>
   </div>
    
    

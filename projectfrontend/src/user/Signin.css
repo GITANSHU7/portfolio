@@ -62,8 +62,10 @@
     display: relative;
   }
   
-  
+  .year,
+  .board,
   .stats,
+  .qualification,
   .name,
   .email,
   .password {
@@ -71,12 +73,19 @@
     flex-direction: column;
     margin-bottom: 15px;
   }
-  
+  .year,
+  .board,
+  .stats,
+  .qualification,
   .stats,
   .firstName,
   .lastName {
     width: 49%;
   }
+  .year,
+  .board,
+  .stats,
+  .qualification,
   .stats,
   .name,
   .email,

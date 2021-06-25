@@ -66,52 +66,65 @@ const AddEducation = () => {
   };
 */}
   const myCategoryForm = () => (
-    <form>
-      <div className="form-group">
-        <p className="lead">Enter the Education Details</p>
-        <input
-          type="text"
-          className="form-control my-3"
-          onChange={handleChange("name")}
-          value={name}
-          autoFocus
-          required
-          placeholder="Institute Name"
-        />
-        <input
-          type="text"
-          className="form-control my-3"
-          onChange={handleChange("year")}
-          value={year}
-          autoFocus
-          required
-          placeholder="PassingYear"
-        />
+    <div className="wrapper">
+    <div className="form-wrapper">
+      <h1>Add Education</h1>
+      <form>
+  <div className="name">
+          <label htmlFor="name">Name</label>
+          <input
+            placeholder="Enter Your School/College Name"
+            type="name"
+            name="name"
+            onChange={handleChange("name")}
+            value={name}
+          />
+          
+        </div>
+        <div className="year">
+          <label htmlFor="email">Year</label>
+          <input
+            placeholder="Enter Your Passing Year"
+            type="number"
+            name="year"
+            onChange={handleChange("year")}
+            value={year}
+          />
+          
+        </div>
+
+<div className="board">
+          <label htmlFor="email">board</label>
+          <input
+            placeholder="Board"
+            type="text"
+            name="board"
+            onChange={handleChange("board")}
+            value={board}
+          />
+          
+        </div>
         
-        <input
-          type="text"
-          className="form-control my-3"
-          onChange={handleChange("board")}
-          value={board}
-          autoFocus
-          required
-          placeholder="Board"
-        />
-        <input
-          type="text"
-          className="form-control my-3"
-          onChange={handleChange("qualification")}
-          value={qualification}
-          autoFocus
-          required
-          placeholder="Qualification"
-        />
+         <div className="qualification">
+          <label htmlFor="email">Qualification</label>
+          <input
+            placeholder="Enter Your Qualification"
+            type="qualification"
+            name="qualification"
+            onChange={handleChange("qualification")}
+            value={qualification}
+          />
+          
+        </div>
         
-        <button onClick={onSubmit} className="btn btn-outline-info">
-          Create Education Details
-        </button>
-      </div>
-    </form>
+       
+        <div className="createAccount">
+          <button type="submit" onClick={onSubmit} >Create</button>
+          <span class="w3-tag w3-#F9B208"  ><Link to = "/admin/dashboard">Admin Home</Link></span>
+        </div>
+      </form>
+    </div>
+  </div>
   );
 
   
@@ -148,14 +161,12 @@ const AddEducation = () => {
   return (
     <
     >
-      <div className="row bg-white rounded">
-        <div className="col-md-8 offset-md-2">
+     
         {successMessage()}
       {errorMessage()}
           {myCategoryForm()}
-          {goBack()}
-        </div>
-      </div>
+          {/*{goBack()}*/}
+       
     </>
   );
 };
