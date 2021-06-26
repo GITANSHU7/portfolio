@@ -31,14 +31,14 @@ exports.getEducation = (req, res) => {
   return res.json(req.education);
 };
 
-exports.getAlleducation = (req, res) => {
-  Education.find().exec((err, educations) => {
+exports.getAllEducation = (req, res) => {
+  Education.find().exec((err, education) => {
     if (err) {
       return res.status(400).json({
         error: "NO educations found"
       });
     }
-    res.json(educations);
+    res.json(education);
   });
 };
 

@@ -75,6 +75,17 @@ export const getProjects = () => {
     .catch(err => console.log(err));
 };
 
+
+//get all education
+export const getAlleducation = () => {
+  return fetch(`${API}/projects`, {
+    method: "GET"
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => console.log(err));
+};
 //delete a project
 
 export const deleteProject = (projectId, userId, token) => {
@@ -138,3 +149,21 @@ export const updateProject= (projectId, userId, token, project) => {
     })
     .catch(err => console.log(err));
 };
+
+
+//update skill
+
+export const updateSkill = (skillId, userId, token) => {
+  return fetch(`${API}/skill/${skillId}/${userId}`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`
+    }
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => console.log(err));
+};
+

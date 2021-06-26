@@ -40,8 +40,8 @@ const AdminDashBoard = ({history}) => {
             </Link>
           </li>
           <li className="list-group-item">
-            <Link to="/admin/orders" className="nav-link text-success">
-              Manage Orders
+            <Link to="/admin/education" className="nav-link text-success">
+              Manage Education
             </Link>
           </li>
         </ul>

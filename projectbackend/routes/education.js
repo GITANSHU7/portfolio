@@ -27,4 +27,23 @@ router.post(
   createEducation
 );
 
+//read
+router.get("/education/:educationId", getEducation);
+router.get("/alleducation", getAllEducation);
+
+//update
+router.put(
+  "/education/:educationId/:userId",
+  isSignedIn,
+  isAuthenticated,
+  isAdmin,
+  updateEducation,
+);
+
+
+//delete
+
+
+
+
 module.exports = router;
