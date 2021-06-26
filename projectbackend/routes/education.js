@@ -43,6 +43,14 @@ router.put(
 
 //delete
 
+router.delete(
+  "/education/:educationId/:userId",
+  isSignedIn,
+  isAuthenticated,
+  isAdmin,
+  removeEducation
+);
+
 
 
 
