@@ -91,7 +91,7 @@ exports.deleteProject = (req, res) => {
   });
 };
 
-// delete controllers
+// update controllers
 exports.updateProject = (req, res) => {
   let form = new formidable.IncomingForm();
   form.keepExtensions = true;

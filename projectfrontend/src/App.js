@@ -28,6 +28,7 @@ import HomePage from "./components/Pages/HomePage";
 import './App.scss'
 import ContactPage from "./components/Pages/ContactPage";
 import ResumePage from "./components/Pages/RemusePage";
+import UpdateProject from "./admin/UpdateProject";
 
 
 function App() {
@@ -76,7 +77,11 @@ return (
         <Route path="/portfolios" exact component={PortfoliosPage} />
         <Route path="/blogs" exact component={BlogsPage} />
         <Route path="/remume" exact component={ResumePage} />
-
+        <AdminRoute
+          path="/admin/project/update/:projectId"
+          exact
+          component={UpdateProject}
+        />
         
        
         

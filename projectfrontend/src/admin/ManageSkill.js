@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { isAutheticated } from "../auth/helper";
 import SkillsSection from "../components/SkillsSection";
-import { getSkills, deleteSkill , updateSkill} from "./helper/adminapicall";
+import { getSkills, deleteSkill } from "./helper/adminapicall";
 
 const ManageSkill = () => {
   const [skills, setSkills] = useState([]);
@@ -36,7 +36,7 @@ const ManageSkill = () => {
   };
 
 
-
+{/*
   const updateThisSkill = skillId => {
     updateSkill(skillId, user._id, token).then(data => {
       if (data.error) {
@@ -45,7 +45,7 @@ const ManageSkill = () => {
         preload();
       }
     });
-  };
+  };*/}
 
   return (
     <>
@@ -64,14 +64,12 @@ const ManageSkill = () => {
                 
                   </div>
                 <div className="col-4">
-                <button
-                    onClick={() => {
-                      updateThisSkill(skill._id);
-                    }}
+                <Link
                     className="btn btn-success"
+                    to={`/admin/skill/update/${skill._id}`}
                   >
-                    Update
-                  </button>
+                    <span className="">Update</span>
+                  </Link>
                 </div>
                 <div className="col-4">
                   <button

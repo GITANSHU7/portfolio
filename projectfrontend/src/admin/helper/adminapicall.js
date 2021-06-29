@@ -78,7 +78,7 @@ export const getProjects = () => {
 
 //get all education
 export const getAlleducation = () => {
-  return fetch(`${API}/projects`, {
+  return fetch(`${API}/alleducation`, {
     method: "GET"
   })
     .then(response => {
