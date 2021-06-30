@@ -29,6 +29,7 @@ import './App.scss'
 import ContactPage from "./components/Pages/ContactPage";
 import ResumePage from "./components/Pages/RemusePage";
 import UpdateProject from "./admin/UpdateProject";
+import UpdateSkill from "./admin/UpdateSkill";
 
 
 function App() {
@@ -81,6 +82,12 @@ return (
           path="/admin/project/update/:projectId"
           exact
           component={UpdateProject}
+        />
+
+<AdminRoute
+          path="/admin/skill/update/:skillId"
+          exact
+          component={UpdateSkill}
         />
         
        

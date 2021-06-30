@@ -104,7 +104,7 @@ export const deleteProject = (projectId, userId, token) => {
 
 // delete skills
 
-export const deleteSkill = (skillId, userId, token) => {
+export const deleteSkill = (skillId, userId, token ) => {
   return fetch(`${API}/skill/${skillId}/${userId}`, {
     method: "DELETE",
     headers: {
@@ -153,13 +153,15 @@ export const updateProject= (projectId, userId, token, project) => {
 
 //update skill
 
-export const updateSkill = (skillId, userId, token) => {
+export const updateSkill = (skillId, userId, token , skill) => {
   return fetch(`${API}/skill/${skillId}/${userId}`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
+      "Content-Type" : "application/json",
       Authorization: `Bearer ${token}`
-    }
+    },
+    body:JSON.stringify({name : skill})
   })
     .then(response => {
       return response.json();
