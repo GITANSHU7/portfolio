@@ -3,7 +3,7 @@ import Tittle from "../components/Titlte";
 import { isAutheticated } from "../auth/helper";
 import { Link } from "react-router-dom";
 import SkillsSection from "../components/SkillsSection";
-import { getSkills, updateSkill } from "./helper/adminapicall";
+import { getSkill, updateSkill } from "./helper/adminapicall";
 
 const UpdateSkill = ({ match }) => {
   const { user, token } = isAutheticated();
@@ -30,7 +30,7 @@ const UpdateSkill = ({ match }) => {
 
 
   const preload = skillId => {
-    getSkills(skillId).then(data => {
+    getSkill(skillId).then(data => {
       //console.log(data);
       if (data.error) {
         setValues({ ...values, error: data.error });

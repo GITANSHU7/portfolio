@@ -133,6 +133,18 @@ export const getProject = projectId => {
     .catch(err => console.log(err));
 };
 
+
+//get a skill
+export const getSkill = skillId => {
+  return fetch(`${API}/skill/${skillId}`, {
+    method: "GET"
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => console.log(err));
+};
+
 //update a project
 
 export const updateProject= (projectId, userId, token, project) => {
