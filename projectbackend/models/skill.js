@@ -15,7 +15,7 @@ const skillSchema = new mongoose.Schema({
         require : true , 
         trim : true,
         maxlenth : 32,
-        unique : true
+     
 
     },
     pathColor: {

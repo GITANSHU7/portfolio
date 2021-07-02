@@ -45,6 +45,9 @@ exports.getAllEducation = (req, res) => {
 exports.updateEducation = (req, res) => {
   const education = req.education;
   education.name = req.body.name;
+  education.year = req.body.year;
+  education.board = req.body.board;
+  education.qualification = req.body.qualification;
 
   education.save((err, updatedEducation) => {
     if (err) {

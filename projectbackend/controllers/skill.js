@@ -42,6 +42,8 @@ exports.getAllSkill = (req, res) => {
 exports.updateSkill = (req, res) => {
   const skill = req.skill;
   skill.name = req.body.name;
+  skill.stats = req.body.stats;
+  skill.pathColor = req.body.pathColor;
 
   skill.save((err, updatedSkill) => {
     if (err) {

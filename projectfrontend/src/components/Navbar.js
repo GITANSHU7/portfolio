@@ -74,7 +74,7 @@ function Navbar() {
 
                 <footer className="footer">
                     <p className="loginstyle">
-                        <Link to ="/signin"><FaUserCircle style={{marginRight : "5px"}} className="icon log" /></Link> Login
+                        <Link to ="/admin/dashboard"><FaUserCircle style={{marginRight : "5px"}} className="icon log" /></Link> Login
                     </p>
             </footer>
             </nav>

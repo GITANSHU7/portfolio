@@ -161,7 +161,7 @@ export const updateSkill = (skillId, userId, token , skill) => {
       "Content-Type" : "application/json",
       Authorization: `Bearer ${token}`
     },
-    body:JSON.stringify({name : skill})
+    body: JSON.stringify(skill)
   })
     .then(response => {
       return response.json();
