@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
 
+
 import { Link } from "react-router-dom";
 import { isAutheticated } from "../auth/helper";
-import { getProjects, deleteProject , updateProject } from "./helper/adminapicall";
+import SkillsSection from "../components/SkillsSection";
+import { getAlleducation, deleteEducation } from "./helper/adminapicall";
 
-const ManageProjects = () => {
-  const [projects, setProjects] = useState([]);
+const ManageEducation = () => {
+  const [educations, setEducations] = useState([]);
 
   const { user, token } = isAutheticated();
 
   const preload = () => {
-    getProjects().then(data => {
+    getAlleducation().then(data => {
       if (data.error) {
         console.log(data.error);
       } else {
-        setProjects(data);
+        setEducations(data);
       }
     });
   };
@@ -23,8 +25,8 @@ const ManageProjects = () => {
     preload();
   }, []);
 
-  const deleteThisProject = projectId => {
-    deleteProject(projectId, user._id, token).then(data => {
+  const deleteThisEducation = educationId => {
+    deleteEducation(educationId, user._id, token).then(data => {
       if (data.error) {
         console.log(data.error);
       } else {
@@ -33,42 +35,42 @@ const ManageProjects = () => {
     });
   };
 
-  
-  const updateThisProject = projectId => {
-    updateProject(projectId, user._id, token).then(data => {
+
+{/*
+  const updateThisEducation = EducationId => {
+    updateEducation(EducationId, user._id, token).then(data => {
       if (data.error) {
         console.log(data.error);
       } else {
         preload();
       }
     });
-  };
-
+  };*/}
 
   return (
     <>
-      <h2 className="mb-4">All projects:</h2>
+      <h2 className="mb-4">All Educations:</h2>
       <Link className="btn btn-info" to={`/admin/dashboard`}>
         <span className="">Admin Home</span>
       </Link>
       <div className="row">
         <div className="col-12">
-          <h2 className="text-center text-white my-3">Total 3 projects</h2>
+          <h2 className="text-center text-black my-3">All Educations</h2>
 
-          {projects.map((project, index) => {
+          {educations.map((education, index) => {
             return (
               <div key={index} className="row text-center mb-2 ">
                 <div className="col-4">
-                  <h3 className="text-white text-left">{project.name} </h3>
-                  <button>{project.description}</button>
-                  <button>{project.github_link}</button>
-                  <button>{project.project_link}</button>
-                  <img src = {project.image} />
-                </div>
+                  <h4>{education.name}</h4>
+                  <h4>{education.year}</h4>
+                  <h4>{education.board}</h4>
+                  <h4>{education.qualification}</h4>
+                
+                  </div>
                 <div className="col-4">
-                  <Link
+                <Link
                     className="btn btn-success"
-                    to={`/admin/project/update/${project._id}`}
+                    to={`/admin/education/update/${education._id}`}
                   >
                     <span className="">Update</span>
                   </Link>
@@ -76,21 +78,11 @@ const ManageProjects = () => {
                 <div className="col-4">
                   <button
                     onClick={() => {
-                      deleteThisProject(project._id);
+                      deleteThisEducation(education._id);
                     }}
                     className="btn btn-danger"
                   >
                     Delete
-                  </button>
-                </div>
-                <div className="col-4">
-                  <button
-                    onClick={() => {
-                      updateThisProject(project._id);
-                    }}
-                    className="btn btn-danger"
-                  >
-                    update
                   </button>
                 </div>
               </div>
@@ -102,4 +94,4 @@ const ManageProjects = () => {
   );
 };
 
-export default ManageProjects;
+export default ManageEducation;

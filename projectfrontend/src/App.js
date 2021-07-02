@@ -29,6 +29,8 @@ import UpdateProject from "./admin/UpdateProject";
 import UpdateSkill from "./admin/UpdateSkill";
 
 import UpdateEducation from "./admin/UpdateEducation";
+import ManageEducation from "./admin/ManageEducation";
+
 
 
 function App() {
@@ -127,6 +129,11 @@ return (
           path="/admin/skills"
           exact
           component={ManageSkill}
+        />
+         <AdminRoute
+          path="/admin/education"
+          exact
+          component={ManageEducation}
         />
       </Switch>
       

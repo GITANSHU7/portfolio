@@ -70,7 +70,9 @@ const UpdateEducation = ({ match }) => {
           setValues({
             ...values,
             name: "",
-          stats: "",
+            qualification: "",
+            board : "",
+            year : "",
           
           loading: false,
           createdEducation: data.name

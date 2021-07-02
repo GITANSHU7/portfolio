@@ -210,3 +210,23 @@ export const updateEducation = (educationId, userId, token , education) => {
     })
     .catch(err => console.log(err));
 };
+
+
+
+//delete education
+
+
+export const deleteEducation = (educationId, userId, token ) => {
+  return fetch(`${API}/education/${educationId}/${userId}`, {
+    method: "DELETE",
+    headers: {
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`
+    }
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => console.log(err));
+};
+
