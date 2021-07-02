@@ -16,10 +16,7 @@ import NavBars from "./core/NavBars";
 import Education from "./core/Education";
 import Contact from "./core/Contact";
 import NavBar from "./components/Navbar";
-
-
 import { useState } from "react";
-
 import Navbar from "./components/Navbar";
 import AboutPage from "./components/Pages/AboutPage";
 import PortfoliosPage from "./components/Pages/PortfoliosPage";
@@ -30,6 +27,8 @@ import ContactPage from "./components/Pages/ContactPage";
 import ResumePage from "./components/Pages/RemusePage";
 import UpdateProject from "./admin/UpdateProject";
 import UpdateSkill from "./admin/UpdateSkill";
+
+import UpdateEducation from "./admin/UpdateEducation";
 
 
 function App() {
@@ -88,6 +87,12 @@ return (
           path="/admin/skill/update/:skillId"
           exact
           component={UpdateSkill}
+        />
+        
+        <AdminRoute
+          path="/admin/education/update/:educationId"
+          exact
+          component={UpdateEducation}
         />
         
        
