@@ -192,3 +192,21 @@ export const updateSkill = (skillId, userId, token , skill) => {
     .catch(err => console.log(err));
 };
 
+//update education
+
+
+export const updateEducation = (educationId, userId, token , education) => {
+  return fetch(`${API}/education/${educationId}/${userId}`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      "Content-Type" : "application/json",
+      Authorization: `Bearer ${token}`
+    },
+    body: JSON.stringify(education)
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => console.log(err));
+};
