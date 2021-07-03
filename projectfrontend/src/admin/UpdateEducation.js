@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Tittle from "../components/Titlte";
-import { isAutheticated } from "../auth/helper";
+import { isAutheticated, signout } from "../auth/helper";
 import { Link } from "react-router-dom";
 import SkillsSection from "../components/SkillsSection";
 import { getEducation, updateEducation } from "./helper/adminapicall";
 
-const UpdateEducation = ({ match }) => {
+const UpdateEducation = ({ match  , history}) => {
   const { user, token } = isAutheticated();
 
   const [values, setValues] = useState({
@@ -162,6 +162,19 @@ const UpdateEducation = ({ match }) => {
    <div>
           {successMessage()}
           {createProductForm()}
+          {isAutheticated() && (
+        
+        <span
+          className="nav-link text-warning"
+          onClick={() => {
+            signout(() => {
+              history.push("/");
+            });
+          }}
+        >
+          Signout
+        </span>
+     )}
           </div>
   );
 };

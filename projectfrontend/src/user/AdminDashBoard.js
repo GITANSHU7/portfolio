@@ -77,6 +77,19 @@ const AdminDashBoard = ({history}) => {
             <span className="badge badge-danger">Admin Area</span>
           </li>
         </ul>
+        {isAutheticated() && (
+        
+          <span
+            className="nav-link text-warning"
+            onClick={() => {
+              signout(() => {
+                history.push("/");
+              });
+            }}
+          >
+            Signout
+          </span>
+       )}
       </div>
     );
   };

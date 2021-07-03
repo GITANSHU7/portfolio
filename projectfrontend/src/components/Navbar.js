@@ -1,12 +1,44 @@
 
 import avatar from '../img/about1.jpg';
 import {NavLink} from 'react-router-dom';
-import React , { Fragment } from 'react';
-import { Link  , withRouter} from 'react-router-dom';
-import { signout, isAutheticated } from '../auth/helper'
+import React , { Fragment , useEffect } from 'react';
+import { Link  , withRouter , useHistory} from 'react-router-dom';
+
+import { isAutheticated , signout } from "../auth/helper/index";
+
 import { FaUserCircle } from 'react-icons/fa';
 
+
+
+
 function Navbar() {
+
+useEffect(() => {
+    handlePush()
+   
+    
+}, [])
+
+
+    const history = useHistory();
+
+    const handlePush = () => {
+        
+    {isAutheticated() && (
+           
+        <span
+          
+          onClick={() => {
+            signout(() => {
+              history.push("/");
+            });
+          }}
+        >
+          Signout
+        </span>
+    )}
+    }
+
     return (
         <div className="NavBar">
             <nav className="nav">
@@ -72,10 +104,23 @@ function Navbar() {
                     )}
                 </ul>
 
+
+{isAutheticated() && (
+       
+          <span
+            
+            onClick={() => {
+              signout(() => {
+                history.push("/");
+              });
+            }}
+          >
+            Signout
+          </span>
+)}
+
                 <footer className="footer">
-                    <p className="loginstyle">
-                        <Link to ="/admin/dashboard"><FaUserCircle style={{marginRight : "5px"}} className="icon log" /></Link> Login
-                    </p>
+    {handlePush()}
             </footer>
             </nav>
             
