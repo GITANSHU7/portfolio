@@ -98,7 +98,7 @@ const UpdateEducation = ({ match  , history}) => {
   const createProductForm = () => (
     <div className="wrapper">
     <div className="form-wrapper">
-      <h1>Add Education</h1>
+      <h1>Update Education</h1>
       <form>
   <div className="name">
           <label htmlFor="name">Name</label>
@@ -148,7 +148,7 @@ const UpdateEducation = ({ match  , history}) => {
         </div>
         
                <div className="createAccount">
-          <button type="submit" onClick={onSubmit} >Login</button>
+          <button className="btun" onClick={onSubmit} >Update Education</button>
           <span class="w3-tag w3-#F9B208"  ><Link to = "/admin/dashboard">Admin Home</Link></span>
       
         
