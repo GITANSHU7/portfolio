@@ -149,6 +149,7 @@ const UpdateEducation = ({ match  , history}) => {
         
                <div className="createAccount">
           <button className="btun" onClick={onSubmit} >Update Education</button>
+        <br />
           <span class="w3-tag w3-#F9B208"  ><Link to = "/admin/dashboard">Admin Home</Link></span>
       
         

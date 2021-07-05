@@ -35,6 +35,15 @@ const educationSchema = new mongoose.Schema({
         unique : true
 
     },
+    path_color : {
+        type : String,
+        require : true , 
+        trim : true,
+        maxlenth : 2000,
+    }
+
+
+
    }, {timestamps : true}
 );
 
