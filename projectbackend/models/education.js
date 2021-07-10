@@ -12,8 +12,8 @@ const educationSchema = new mongoose.Schema({
     year : {
         type : String,
         require : true , 
-        trim : true,
-        maxlenth : 2000,
+       
+        
   
 
     },

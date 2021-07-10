@@ -1,44 +1,14 @@
 
 import avatar from '../img/about1.jpg';
 import {NavLink} from 'react-router-dom';
-import React , { Fragment , useEffect } from 'react';
-import { Link  , withRouter , useHistory} from 'react-router-dom';
+import React , { Fragment } from 'react';
+import { Link  , withRouter} from 'react-router-dom';
 
 import { isAutheticated , signout } from "../auth/helper/index";
 
 import { FaUserCircle } from 'react-icons/fa';
 
-
-
-
-function Navbar() {
-
-useEffect(() => {
-    handlePush()
-   
-    
-}, [])
-
-
-    const history = useHistory();
-
-    const handlePush = () => {
-        
-    {isAutheticated() && (
-           
-        <span
-          
-          onClick={() => {
-            signout(() => {
-              history.push("/");
-            });
-          }}
-        >
-          Signout
-        </span>
-    )}
-    }
-
+function Navbar({history}) {
     return (
         <div className="NavBar">
             <nav className="nav">
@@ -81,7 +51,7 @@ useEffect(() => {
                     </li>
                     
                   
-                   
+              {/*     
                     {!isAutheticated() && (
         <Fragment>
           <li className="nav-item">
@@ -101,10 +71,10 @@ useEffect(() => {
             </NavLink>
           </li>
         </Fragment>
-                    )}
+                    )}*/}
                 </ul>
 
-
+{/*
 {isAutheticated() && (
        
           <span
@@ -117,10 +87,12 @@ useEffect(() => {
           >
             Signout
           </span>
-)}
+        )}*/}
 
                 <footer className="footer">
-    {handlePush()}
+                    <p className="loginstyle">
+                        <Link to ="/admin/dashboard"><FaUserCircle style={{marginRight : "5px"}} className="icon log" /></Link> Login
+                    </p>
             </footer>
             </nav>
             
