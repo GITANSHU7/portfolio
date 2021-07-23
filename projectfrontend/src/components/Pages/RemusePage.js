@@ -7,7 +7,7 @@ import 'react-vertical-timeline-component/style.min.css';
 function App() {
   return (
     <div >
-    <Tittle title={'Qualification'} span={'Qualification'} />
+    <Tittle title={'Qualification'}  />
     <br />
 <VerticalTimeline>
 <VerticalTimelineElement

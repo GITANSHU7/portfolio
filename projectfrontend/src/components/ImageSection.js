@@ -20,7 +20,7 @@ function ImageSection() {
                         <p>Languages</p>
                         <p>Address</p>
                         <br />
-                        <p>Email Id</p>
+                     
                     </div>
                     <div className="right-section">
                         <p>: Gitanshu Gautam</p>
@@ -29,7 +29,7 @@ function ImageSection() {
                         <p>: English , Hindi</p>
                         <p>: Punjabi Colony , Street No 7,Samastipur,Bihar</p>
                         <br />
-                        <p>:gitanshugautam7@gmail.com</p>
+                       
                     </div>
                 </div>
                 {/*<button className="btn">Download Cv</button> */}
