@@ -23,21 +23,15 @@ function HomePage() {
                 I enjoy turning complex problems into simpler one. When I'm not pushing logics, you'll find me playing cricket, chilling or playing Pubg.
                 </p>
                 <div className="icons">
-                    <a href="https://github.com/GITANSHU7" className="icon-holder">
-                        <FontAwesomeIcon icon={faFacebook} className="icon fb" />
-                    </a>
+                    
                     <a href="https://github.com/GITANSHU7" className="icon-holder">
                         <FontAwesomeIcon icon={faGithub} className="icon gh" />
                     </a>
-                    <Link to="test" className="icon-holder">
-                        <FontAwesomeIcon icon={faYoutube} className="icon yt"/>
-                    </Link>
+                   
                     <a href="https://www.linkedin.com/in/gitanshu-gautam-3a863b149/" className="icon-holder">
                         <FontAwesomeIcon icon={faLinkedin} className="icon li"/>
                     </a>
-                    <Link to="test" className="icon-holder">
-                        <FontAwesomeIcon icon={faAndroid} className="icon li"/>
-                    </Link>
+                  
                 </div>
                 <br />
                 <br />

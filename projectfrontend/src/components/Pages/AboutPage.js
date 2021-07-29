@@ -51,7 +51,7 @@ function AboutPage() {
                 
                </div>
            )
-           })}
+           })} {/*
             <Tittle title={'Services'} span={'Services'} />
             <div className="servives-container">
                 <ServicesSection image={design} title={'Web design'} 
@@ -65,7 +65,7 @@ function AboutPage() {
                 />
 
                 
-            </div>
+           </div>*/}
             <Link to = "/portfolios">
                 <FaArrowCircleRight  className="float-right" style={{fontSize : "2.5rem",alignItems : "left" }} /></Link>
         </div>

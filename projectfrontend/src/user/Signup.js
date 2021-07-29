@@ -5,8 +5,8 @@ import { signup } from "../auth/helper";
 
 const Signup = () => {
   const [values, setValues] = useState({
-    name: "gitanshu",
-    email: "gitanshu@gmail.com",
+    name: "",
+    email: "",
     password: "",
     error: "",
     success: false

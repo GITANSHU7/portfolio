@@ -28,8 +28,8 @@ function Navbar({history}) {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/resume" exact activeClassName="active">
-                            Resume
+                        <NavLink to="/educational_details" exact activeClassName="active">
+                            Education
                         </NavLink>
                     </li>
                    

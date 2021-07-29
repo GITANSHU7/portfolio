@@ -96,7 +96,7 @@ const AddSkill = () => {
          
         </div>
         <div className="createAccount">
-          <button type="submit" onClick={onSubmit} >Login</button>
+          <button type="submit" onClick={onSubmit} >ADD</button>
           <span class="w3-tag w3-#F9B208"  ><Link to = "/admin/dashboard">Admin Home</Link></span>
       
         

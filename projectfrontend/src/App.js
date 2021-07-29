@@ -5,7 +5,7 @@ import Signup from "./user/Signup";
 import Signin from "./user/Signin";
 import AdminRoute from "./auth/helper/AdminRoutes";
 import PrivateRoute from "./auth/helper/PrivateRoutes";
-import UserDashBoard from "./user/UserDashBoard";
+
 import AdminDashBoard from "./user/AdminDashBoard";
 import AddSkill from "./admin/AddSkill";
 import AddProject from "./admin/AddProject";
@@ -78,7 +78,7 @@ return (
         <Route path="/about" exact component={AboutPage} />
         <Route path="/portfolios" exact component={PortfoliosPage} />
         <Route path="/blogs" exact component={BlogsPage} />
-        <Route path="/remume" exact component={ResumePage} />
+        <Route path="/educational_details" exact component={ResumePage} />
         <AdminRoute
           path="/admin/project/update/:projectId"
           exact
@@ -99,10 +99,7 @@ return (
         
        
         
-        <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
-        <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
-        <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
-        <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
+        
         <AdminRoute path="/admin/dashboard"ca exact component={AdminDashBoard} />
         <AdminRoute
           path="/admin/create/skill"
