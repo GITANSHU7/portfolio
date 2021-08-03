@@ -35,7 +35,7 @@ function Navbar({history}) {
                    
                     <li className="nav-item">
                         <NavLink to="/portfolios" exact activeClassName="active">
-                            Portfolios
+                            Portfolio
                         </NavLink>
                     </li>
                     
@@ -74,7 +74,7 @@ function Navbar({history}) {
                     )}*/}
                 </ul>
 
-{/*
+
 {isAutheticated() && (
        
           <span
@@ -87,7 +87,7 @@ function Navbar({history}) {
           >
             Signout
           </span>
-        )}*/}
+        )}
 
                 <footer className="footer">
                     <p className="loginstyle">

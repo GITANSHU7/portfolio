@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 import Tittle from '../../components/Titlte'
 import ImageSection from '../../components/ImageSection';
 import SkillsSection from '../../components/SkillsSection';
-import ServicesSection from '../../components/ServicesSection';
-import design from '../../img/design.svg';
-import intelligence from '../../img/intelligence.svg';
-import gamedev from '../../img/game-dev.svg';
+
 import {Link} from 'react-router-dom';
 import {FaAndroid, FaArrowAltCircleLeft, FaArrowCircleDown ,  FaArrowCircleRight } from 'react-icons/fa';
 import { getSkills } from '../../admin/helper/adminapicall';
@@ -39,10 +36,10 @@ function AboutPage() {
 <br />
 <br />
         <div className="AboutPage">
-            <Tittle title={'About Me'} span={'About Me'} />
+            <Tittle title={'About Me'} span={'About'} />
             <ImageSection />
             
-            <Tittle title={'My Skills'} span={'My Skills'} />
+            <Tittle title={'My Skills'} span={'Skills'} />
            
           {skills.map((skill, index) => {
            return (

@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./core/Home";
+
 import Signup from "./user/Signup";
 import Signin from "./user/Signin";
 import AdminRoute from "./auth/helper/AdminRoutes";
-import PrivateRoute from "./auth/helper/PrivateRoutes";
+
 
 import AdminDashBoard from "./user/AdminDashBoard";
 import AddSkill from "./admin/AddSkill";
