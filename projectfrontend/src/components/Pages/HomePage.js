@@ -1,13 +1,7 @@
 import React from 'react';
-import {faFacebook} from '@fortawesome/free-brands-svg-icons';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
-import {faYoutube} from '@fortawesome/free-brands-svg-icons';
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import {faAndroid} from '@fortawesome/free-brands-svg-icons';
-import {faArrow} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {Link} from 'react-router-dom';
-import {FaAndroid, FaArrowAltCircleDown, FaArrowCircleDown } from 'react-icons/fa';
 
 function HomePage() {
     return (
