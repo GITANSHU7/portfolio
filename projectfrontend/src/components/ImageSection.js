@@ -25,9 +25,9 @@ function ImageSection() {
                     <div className="right-section">
                         <p>: Gitanshu Gautam</p>
                         <p>: 22</p>
-                        <p>: Proud Indian</p>
+                        <p>: Indian</p>
                         <p>: English , Hindi</p>
-                        <p>: Punjabi Colony , Street No 7,Samastipur,Bihar</p>
+                        <p>: Punjabi Colony,Street No 7,Samastipur,Bihar</p>
                         <br />
                        
                     </div>

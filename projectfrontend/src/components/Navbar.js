@@ -75,19 +75,6 @@ function Navbar({history}) {
                 </ul>
 
 
-{isAutheticated() && (
-       
-          <span
-            
-            onClick={() => {
-              signout(() => {
-                history.push("/");
-              });
-            }}
-          >
-            Signout
-          </span>
-        )}
 
                 <footer className="footer">
                     <p className="loginstyle">

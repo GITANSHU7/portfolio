@@ -7,7 +7,7 @@ import 'react-vertical-timeline-component/style.min.css';
 function App() {
   return (
     <div >
-    <Tittle title={'Qualification'}  />
+    <Tittle title={'Details'} span={'Education'}  />
     <br />
 <VerticalTimeline>
 <VerticalTimelineElement
@@ -116,9 +116,10 @@ icon ={<MdSchool />}
   
   />
 </VerticalTimeline>
+{/*
 <div class="back-to-top-wrapper">
     <a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
-  </div>
+</div>*/}
 </div>
   );
   }

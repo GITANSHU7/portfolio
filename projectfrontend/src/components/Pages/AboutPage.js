@@ -39,7 +39,7 @@ function AboutPage() {
             <Tittle title={'About Me'} span={'About'} />
             <ImageSection />
             
-            <Tittle title={'My Skills'} span={'Skills'} />
+            <Tittle title={'My Skills'} span={'Skill'} />
            
           {skills.map((skill, index) => {
            return (

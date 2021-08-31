@@ -19,9 +19,7 @@ function HomePage() {
                     <span> Gitanshu Gautam</span>
                 </h1>
                 <p className="h-sub-text">
-                I'm a Full Stack Web Developer based in Bihar, India .
-                I enjoy turning complex problems into simpler one. When I'm not pushing logics, you'll find me playing cricket, chilling or playing Pubg.
-                </p>
+                Full Stack Developer by profession and passion. I am based out of Bihar and I enjoy turning complicated problems into simpler ones. When I am not banging on the keyboard, you can find me playing cricket, chilling with friends     </p>
                 <div className="icons">
                     
                     <a href="https://github.com/GITANSHU7" className="icon-holder">
@@ -38,9 +36,7 @@ function HomePage() {
                
                    
             </header>
-            <Link to = "about">
-                <FaArrowAltCircleDown  className="float-right" style={{fontSize : "2.5rem",alignItems : "left" }} /></Link>
-
+           
         </div>
         
         
