@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Signup from "./user/Signup";
 import Signin from "./user/Signin";
@@ -12,15 +12,13 @@ import AddProject from "./admin/AddProject";
 import AddEducation from "./admin/AddEducation";
 import ManageProjects from "./admin/ManageProjects";
 import ManageSkill from "./admin/ManageSkill";
-import NavBars from "./core/NavBars";
+
 import Education from "./core/Education";
-import Contact from "./core/Contact";
-import NavBar from "./components/Navbar";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import AboutPage from "./components/Pages/AboutPage";
 import PortfoliosPage from "./components/Pages/PortfoliosPage";
-import BlogsPage from "./components/Pages/BlogsPage";
+import Project from "./components/Pages/BlogsPage";
 import HomePage from "./components/Pages/HomePage";
 import './App.scss'
 import ContactPage from "./components/Pages/ContactPage";
@@ -30,6 +28,7 @@ import UpdateSkill from "./admin/UpdateSkill";
 
 import UpdateEducation from "./admin/UpdateEducation";
 import ManageEducation from "./admin/ManageEducation";
+import PageNotFound from "./components/Pages/PageNotFound";
 
 
 
@@ -77,7 +76,7 @@ return (
     
         <Route path="/about" exact component={AboutPage} />
         <Route path="/portfolios" exact component={PortfoliosPage} />
-        <Route path="/blogs" exact component={BlogsPage} />
+        <Route path="/project" exact component={Project} />
         <Route path="/educational_details" exact component={ResumePage} />
         <AdminRoute
           path="/admin/project/update/:projectId"
@@ -100,7 +99,7 @@ return (
        
         
         
-        <AdminRoute path="/admin/dashboard"ca exact component={AdminDashBoard} />
+        <AdminRoute path="/admin/dashboard" exact component={AdminDashBoard} />
         <AdminRoute
           path="/admin/create/skill"
           exact
@@ -132,6 +131,7 @@ return (
           exact
           component={ManageEducation}
         />
+        <Route component = {PageNotFound} />
       </Switch>
       
             

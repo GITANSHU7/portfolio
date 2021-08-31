@@ -1,6 +1,4 @@
 import React from 'react';
-import about from '../img/about.jpg';
-
 function ImageSection() {
     return (
         <div className="ImageSection">
@@ -10,7 +8,7 @@ function ImageSection() {
             <div className="about-info">
                 <h4>I am<span> Gitanshu Gautam</span></h4>
                 <p className="about-text">
-                    Full stack Web Developer Enthusiasm.
+                    Full stack Web Developer Enthusiast.
                 </p>
                 <div className="about-details">
                     <div className="left-section">
@@ -18,7 +16,7 @@ function ImageSection() {
                         <p>Age</p>
                         <p>Nationality</p>
                         <p>Languages</p>
-                        <p>Address</p>
+                       
                         <br />
                      
                     </div>
@@ -27,7 +25,7 @@ function ImageSection() {
                         <p>: 22</p>
                         <p>: Indian</p>
                         <p>: English , Hindi</p>
-                        <p>: Punjabi Colony,Street No 7,Samastipur,Bihar</p>
+                       
                         <br />
                        
                     </div>

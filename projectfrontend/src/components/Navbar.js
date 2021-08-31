@@ -4,8 +4,6 @@ import {NavLink} from 'react-router-dom';
 import React , { Fragment } from 'react';
 import { Link  , withRouter} from 'react-router-dom';
 
-import { isAutheticated , signout } from "../auth/helper/index";
-
 import { FaUserCircle } from 'react-icons/fa';
 
 function Navbar({history}) {
@@ -33,15 +31,10 @@ function Navbar({history}) {
                         </NavLink>
                     </li>
                    
-                    <li className="nav-item">
-                        <NavLink to="/portfolios" exact activeClassName="active">
-                            Portfolio
-                        </NavLink>
-                    </li>
                     
                     <li className="nav-item">
-                        <NavLink to="/blogs" exact activeClassName="active">
-                            Blogs
+                        <NavLink to="/project" exact activeClassName="active">
+                            Project
                         </NavLink>
                     </li>
                     <li className="nav-item">
@@ -78,7 +71,7 @@ function Navbar({history}) {
 
                 <footer className="footer">
                     <p className="loginstyle">
-                        <Link to ="/admin/dashboard"><FaUserCircle style={{marginRight : "5px"}} className="icon log" /></Link> Login
+                        <Link to ="/admin/dashboard"><FaUserCircle style={{marginRight : "5px"}} className="icon log" /></Link> 
                     </p>
             </footer>
             </nav>

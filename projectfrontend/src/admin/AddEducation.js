@@ -17,14 +17,7 @@ const AddEducation = () => {
   const { user, token } = isAutheticated();
   const { name, board, year, qualification, error, success } = values;
 
-  const goBack = () => (
-    <div className="mt-5">
-      <Link className="btn btn-sm btn-success mb-3" to="/admin/dashboard">
-        Admin Home
-      </Link>
-    </div>
-  );
-
+ 
   const handleChange = name => event => {
     setValues({ ...values, error: false, [name]: event.target.value });
   };

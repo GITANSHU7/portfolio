@@ -1,11 +1,10 @@
 import React , {useEffect , useState} from 'react';
 import Tittle from '../../components/Titlte'
-import allBlogs from '../../components/allBlogs';
-import { isAutheticated } from '../../auth/helper';
+
 import { getProjects } from '../../admin/helper/adminapicall';
 import { API } from '../../backend';
 import ImageHelper from '../../core/helper/ImageHelper';
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -13,7 +12,7 @@ import { Link } from 'react-router-dom';
 function BlogsPage({project}) {
     const [projects, setProjects] = useState([]);
 
-    const { user, token } = isAutheticated();
+  
     
     const imageurl = project
     ? `${API}/project/photo/${project._id}`
@@ -39,7 +38,7 @@ function BlogsPage({project}) {
     return (
         <div >
             <div className="b-title">
-                <Tittle title={'Recent Blogs'} span={'Recent Blogs'} />
+                <Tittle title={'Projects'} span={'Projects'} />
             </div>
             <div className="BlogsPage">
             {projects.map((project, index) => {

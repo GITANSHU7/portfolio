@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Tittle from "../components/Titlte";
+
 import { isAutheticated, signout } from "../auth/helper";
 import { Link } from "react-router-dom";
-import SkillsSection from "../components/SkillsSection";
+
 import { getEducation, updateEducation } from "./helper/adminapicall";
 
 const UpdateEducation = ({ match  , history}) => {

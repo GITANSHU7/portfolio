@@ -1,8 +1,4 @@
 import React , { useState } from 'react'
-import ContactItem from '../../components/ContactItem';
-import phone from '../../img/phone.svg';
-import email from '../../img/emailme.svg';
-import location from '../../img/location.svg';
 import Tittle from '../../components/Titlte';
 import emailjs from "emailjs-com";
 
@@ -86,11 +82,12 @@ function ContactPage() {
 
 </div>
 
-
-               {/* <div className="contact-sect">
-                    <ContactItem icon={phone} text1={'+257 7756110718'} text2={'+0333 6782 8792'} title={'Phone'}/>
-                    <ContactItem icon={email} text1={'loremipusum@hmail.com'} text2={'abcloremipsum@gmail.com'} title={'Email'}/>
-    </div>*/}
+   <br />
+{/*
+               <div className="contact-sect">
+                   <br />
+                    <ContactItem icon={email} text1={'gitanshugautam7@gmail.com'}  title={'Email'}/>
+</div> */}
     </form>
             </div>
             

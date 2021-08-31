@@ -1,0 +1,8 @@
+.env
+<<<<<<< HEAD
+node_modules/
+node_module
+.eslintcache
+=======
+node_module
+>>>>>>> c52e289612cad95de1015d76b2da01abfe4548c8

@@ -2,7 +2,7 @@ import React from 'react';
 import Tittle from '../Titlte';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
- import { MdWork } from 'react-icons/md';
+ 
  import { MdSchool } from 'react-icons/md';
 function App() {
   return (

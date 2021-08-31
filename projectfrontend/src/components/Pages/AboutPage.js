@@ -63,9 +63,7 @@ function AboutPage() {
 
                 
            </div>*/}
-            <Link to = "/portfolios">
-                <FaArrowCircleRight  className="float-right" style={{fontSize : "2.5rem",alignItems : "left" }} /></Link>
-        </div>
+            </div>
         
     </>
     )

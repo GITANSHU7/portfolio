@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { isAutheticated } from "../auth/helper";
-import SkillsSection from "../components/SkillsSection";
+
 import { getAlleducation, deleteEducation } from "./helper/adminapicall";
 
 const ManageEducation = () => {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Tittle from "../components/Titlte";
 import { isAutheticated } from "../auth/helper";
 import { Link } from "react-router-dom";
-import SkillsSection from "../components/SkillsSection";
+
 import { getSkill, updateSkill } from "./helper/adminapicall";
 
 const UpdateSkill = ({ match }) => {
